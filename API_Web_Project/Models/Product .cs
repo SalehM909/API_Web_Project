@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace OrderManagementSystem.Model
+namespace API_Web_Project.Model
 {
     public class Product
     {
