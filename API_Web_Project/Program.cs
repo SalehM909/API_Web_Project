@@ -10,7 +10,7 @@ namespace API_Web_Project
         {
 
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseSqlServer("Data Source=(local); Initial Catalog=Order Management System; Integrated Security=true; TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Data Source=(local); Initial Catalog=OrderManagementAPIsTask; Integrated Security=true; TrustServerCertificate=True");
 
             var builder = WebApplication.CreateBuilder(args);
 
