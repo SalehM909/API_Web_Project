@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using OrderManagementSystem.DTO;
-using OrderManagementSystem.Services;
+using API_Web_Project.DTO;
+using API_Web_Project.Services;
+using API_Web_Project.Services;
 
-namespace OrderManagementSystem.Controllers
+namespace API_Web_Project.Controllers
 {
     [ApiController]
     [Route("Api/[controller]")]

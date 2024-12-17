@@ -1,6 +1,6 @@
-using OrderManagementSystem.Model;
+using API_Web_Project.Model;
 
-namespace OrderManagementSystem.Repositories
+namespace API_Web_Project.Repositories
 {
     public class UserRepository : IUserRepository
     {

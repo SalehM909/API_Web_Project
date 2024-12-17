@@ -1,12 +1,12 @@
 using Microsoft.IdentityModel.Tokens;
-using OrderManagementSystem.DTO;
-using OrderManagementSystem.Model;
-using OrderManagementSystem.Repositories;
+using API_Web_Project.DTO;
+using API_Web_Project.Model;
+using API_Web_Project.Repositories;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace OrderManagementSystem.Services
+namespace API_Web_Project.Services
 {
     public class UserService
     {
