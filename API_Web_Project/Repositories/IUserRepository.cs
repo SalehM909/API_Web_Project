@@ -7,5 +7,6 @@ namespace API_Web_Project.Repositories
         void AddUser(User user);
         User GetByEmail(string email);
         User GetById(int id);
+        void UpdateUser(User user);
     }
 }
