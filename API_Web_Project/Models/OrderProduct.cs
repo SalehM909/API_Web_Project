@@ -1,4 +1,5 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace API_Web_Project.Model
 {
@@ -13,6 +14,8 @@ namespace API_Web_Project.Model
 
         // Relationships
         public Order Order { get; set; }
+
+        [JsonIgnore]
         public Product Product { get; set; }
     }
 

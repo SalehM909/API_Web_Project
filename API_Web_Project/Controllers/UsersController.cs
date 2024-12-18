@@ -1,6 +1,5 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using API_Web_Project.DTO;
-using API_Web_Project.Services;
 using API_Web_Project.Services;
 
 namespace API_Web_Project.Controllers
@@ -9,9 +8,9 @@ namespace API_Web_Project.Controllers
     [Route("Api/[controller]")]
     public class UsersController : ControllerBase
     {
-        private readonly UserService _userService;
+        private readonly IUserService _userService;
 
-        public UsersController(UserService userService)
+        public UsersController(IUserService userService)
         {
             _userService = userService;
         }
@@ -30,13 +29,27 @@ namespace API_Web_Project.Controllers
             }
         }
 
-        [HttpPost("Login")]
-        public IActionResult Login([FromBody] LoginDto model)
+        [HttpGet("Login")]
+        public IActionResult Login(LoginDto model)
         {
             try
             {
                 var token = _userService.Login(model);
                 return Ok(new { Token = token });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPut("update")]
+        public IActionResult UpdateUser([FromBody] UpdateUserDto model)
+        {
+            try
+            {
+                var updatedUser = _userService.UpdateUser(model);
+                return Ok(updatedUser);
             }
             catch (Exception ex)
             {

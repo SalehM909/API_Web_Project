@@ -1,4 +1,5 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace API_Web_Project.Model
 {
@@ -12,7 +13,7 @@ namespace API_Web_Project.Model
         public int ProductId { get; set; }  // Foreign Key to Product
 
         [Required]
-        public int Rating { get; set; }  // Required, 1 to 5
+        public decimal Rating { get; set; }  // Required, 1 to 5
 
         public string Comment { get; set; }  // Optional
 
@@ -20,6 +21,8 @@ namespace API_Web_Project.Model
 
         // Relationships
         public User User { get; set; }
+
+        [JsonIgnore]
         public Product Product { get; set; }
     }
 

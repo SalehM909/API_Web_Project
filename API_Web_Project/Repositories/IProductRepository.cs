@@ -1,4 +1,4 @@
-using API_Web_Project.Model;
+﻿using API_Web_Project.Model;
 
 namespace API_Web_Project.Repositories
 {
@@ -7,5 +7,8 @@ namespace API_Web_Project.Repositories
         void AddProduct(Product product);
         List<Product> GetAll();
         Product GetById(int id);
+        List<Product> GetFilteredProducts(string name, decimal minPrice, decimal maxPrice, int page, int pageSize);
+        Product GetProductById(int id);
+        void UpdateProduct(Product product);
     }
 }
