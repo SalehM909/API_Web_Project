@@ -1,4 +1,4 @@
-﻿using API_Web_Project.Model;
+using API_Web_Project.Model;
 
 namespace API_Web_Project.Repositories
 {
@@ -7,6 +7,6 @@ namespace API_Web_Project.Repositories
         void AddUser(User user);
         User GetByEmail(string email);
         User GetById(int id);
-        void UpdateUser(User user);
+        User GetUser(string email, string password);
     }
 }
