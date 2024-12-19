@@ -9,7 +9,6 @@ namespace API_Web_Project.Model
 
         public int ProductId { get; set; }  // Foreign Key to Product
 
-        [Required]
         public int Quantity { get; set; }  // Required, must be > 0
 
         // Relationships
